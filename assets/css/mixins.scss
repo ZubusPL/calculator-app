@@ -1,0 +1,9 @@
+@mixin transition($ms) {
+	-webkit-transition: $ms;
+	transition: $ms;
+}
+
+@mixin translate($x, $y) {
+	-webkit-transform: translate($x, $y);
+	transform: translate($x, $y);
+}
