@@ -4,42 +4,44 @@
 		<meta charset="utf-8" />
 		<title>Material Design Calculator App</title>
 		<link rel="stylesheet" href="assets/css/main.min.css" type="text/css" />
+		<link rel="stylesheet" href="assets/css/css/font-awesome.min.css" type="text/css" />
 	</head>
 	<body>
 		<div class="app">
 			<div class="calculator">
 				<div class="calculator__result">
 					<a href="" class="calculator__clear">
-						Wyczyść
+						<i class="fa fa-repeat"></i>
 					</a>
 					<a href="" class="calculator__settings">
-						Ustawienia
+						<i class="fa fa-cog"></i>
 					</a>
 					<div class="calculator__result-content">
 						0
 					</div>
 				</div>
-				<div class="calculator__interface">
-					<a href="" class="calculator__button calculator__button--w-50">=</a>
-					<a href="" class="calculator__button calculator__button--w-50">x</a>
-					<a href="" class="calculator__button calculator__button--w-25">1</a>
-					<a href="" class="calculator__button calculator__button--w-25">2</a>
-					<a href="" class="calculator__button calculator__button--w-25">3</a>
-					<a href="" class="calculator__button calculator__button--w-25">:</a>
-					<a href="" class="calculator__button calculator__button--w-25">4</a>
-					<a href="" class="calculator__button calculator__button--w-25">5</a>
-					<a href="" class="calculator__button calculator__button--w-25">6</a>
-					<a href="" class="calculator__button calculator__button--w-25">x</a>
-					<a href="" class="calculator__button calculator__button--w-25">7</a>
-					<a href="" class="calculator__button calculator__button--w-25">8</a>
-					<a href="" class="calculator__button calculator__button--w-25">9</a>
-					<a href="" class="calculator__button calculator__button--w-25">-</a>
-					<a href="" class="calculator__button calculator__button--w-25">%</a>
-					<a href="" class="calculator__button calculator__button--w-25">0</a>
+				<div class="calculator__interface" data-element="keys">
+					<a href="" class="calculator__button calculator__button--w-50" data-element="submit">=</a>
+					<a href="" class="calculator__button calculator__button--w-50" data-element="back">x</i></a>
+					<a href="" class="calculator__button calculator__button--w-25" data-element="key" value="1">1</a>
+					<a href="" class="calculator__button calculator__button--w-25" data-element="key" value="2">2</a>
+					<a href="" class="calculator__button calculator__button--w-25" data-element="key" value="3">3</a>
+					<a href="" class="calculator__button calculator__button--w-25">/</a>
+					<a href="" class="calculator__button calculator__button--w-25" data-element="key" value="4">4</a>
+					<a href="" class="calculator__button calculator__button--w-25" data-element="key" value="5">5</a>
+					<a href="" class="calculator__button calculator__button--w-25" data-element="key" value="6">6</a>
+					<a href="" class="calculator__button calculator__button--w-25">*</a>
+					<a href="" class="calculator__button calculator__button--w-25" data-element="key" value="7">7</a>
+					<a href="" class="calculator__button calculator__button--w-25" data-element="key" value="8">8</a>
+					<a href="" class="calculator__button calculator__button--w-25" data-element="key" value="9">9</a>
+					<a href="" class="calculator__button calculator__button--w-25">-</i></a>
+					<a href="" class="calculator__button calculator__button--w-25">%</i></a>
+					<a href="" class="calculator__button calculator__button--w-25" data-element="key" value="0">0</a>
 					<a href="" class="calculator__button calculator__button--w-25">.</a>
 					<a href="" class="calculator__button calculator__button--w-25">+</a>
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript" src="assets/js/functions.js"></script>
 	</body>
 </html>

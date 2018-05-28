@@ -7,3 +7,8 @@
 	-webkit-transform: translate($x, $y);
 	transform: translate($x, $y);
 }
+
+@mixin scale($x, $y) {
+	-webkit-transform: scale($x, $y);
+	transform: scale($x, $y);
+}
