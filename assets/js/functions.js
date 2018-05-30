@@ -3,11 +3,12 @@ window.onload = function() {
 		keys = [],
 		buttons = {},
 		$interface = null,
-		contentString;
+		contentString, lastContentString;
 
 	$interface = document.getElementById('interface');
 	keys = $interface.getElementsByClassName('calculator__button');
-	contentString = document.getElementById('content-string').innerHTML;
+	contentString = document.getElementById('content-string');
+	lastContentString = contentString.innerHTML;
 
 	buttons.clear = document.getElementById('clear');
 	buttons.settings = document.getElementById('settings');
@@ -39,7 +40,8 @@ window.onload = function() {
 		e.preventDefault();
 
 		if (buttons.clear !== 'undefined') {
-			console.log('yup!');
+			contentString.innerHTML = '';
+			lastContentString = '';
 		}
 	}
 
@@ -52,9 +54,8 @@ window.onload = function() {
 	}
 
 	function updateView(value, action) {
-		contentString = '';
-		contentString = action + ' ' + value + '<br/>';
-		console.log(value, action);
-		console.log(contentString);
+		contentString.innerHTML = '';
+		contentString.innerHTML += lastContentString + action + ' ' + value + '<br/>';
+		lastContentString += action + ' ' + value + '<br/>';
 	}
 }

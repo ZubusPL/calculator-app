@@ -5,6 +5,20 @@
 		position: relative;
 		background-color: $calculator-result-background;
 		height: $calculator-result-height;
+		overflow: hidden;
+		&:before {
+			position: absolute;
+			content: '';
+			background-color: #ffffff;
+			top: 0;
+			left: 0;
+			right: 0;
+			height: 40px;
+			z-index: 20;
+			-webkit-box-shadow: 0px 27px 30px -20px rgba(255,255,255,1);
+			-moz-box-shadow: 0px 27px 30px -20px rgba(255,255,255,1);
+			box-shadow: 0px 27px 20px 0 rgba(255,255,255,1);
+		}
 	}
 	& &__result-content {
 		position: absolute;
@@ -14,6 +28,7 @@
 		text-align: right;
 		color: $calculator-result-color;
 		padding: 0 10px 10px 0;
+		@include transition(500ms);
 	}
 	& &__icon {
 		@include transition(500ms);
@@ -26,7 +41,8 @@
 		color: #000000;
 		text-decoration: none;
 		top: 5px;
-		&:hover, &:focus {
+		z-index: 30;
+		&:hover {
 			.calculator__icon {
 				@include rotate(360deg);
 			}
