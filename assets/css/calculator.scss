@@ -15,17 +15,27 @@
 		color: $calculator-result-color;
 		padding: 0 10px 10px 0;
 	}
+	& &__icon {
+		@include transition(500ms);
+		-webkit-transform-origin: center center;
+		transform-origin: center center;
+		color: #5c5c5c;
+	}
 	& &__clear, & &__settings {
 		position: absolute;
 		color: #000000;
 		text-decoration: none;
+		top: 5px;
+		&:hover, &:focus {
+			.calculator__icon {
+				@include rotate(360deg);
+			}
+		}
 	}
 	& &__clear {
-		top: 5px;
 		left: 5px;
 	}
 	& &__settings {
-		top: 5px;
 		right: 5px;
 	}
 	& &__interface {
@@ -62,6 +72,7 @@
 			@include transition(500ms);
 			@include scale(0, 0);
 			opacity: 0;
+			border-radius: 5px;
 		}
 		&.calculator__button--w-50 {
 			width: 50%;

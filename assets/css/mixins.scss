@@ -12,3 +12,8 @@
 	-webkit-transform: scale($x, $y);
 	transform: scale($x, $y);
 }
+
+@mixin rotate($deg) {
+	-webkit-transform: rotate($deg);
+	transform: rotate($deg);
+}
